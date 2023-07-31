@@ -1,6 +1,6 @@
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-part '{{feature}}_failure.freezed.dart';
+part '{{feature.snakeCase()}}_failure.freezed.dart';
  
 @freezed
 class {{feature.pascalCase()}}Failure with _${{feature.pascalCase()}}Failure { 

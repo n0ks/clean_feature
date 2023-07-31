@@ -8,7 +8,7 @@ class {{feature.pascalCase()}}State with _${{feature.pascalCase()}}State {
   }) = _{{feature.pascalCase()}}Initial;
 
 
-  factory {{feature.pascalCase()}}State.initial() => {{feature.pascalCase()}}State({foo: ''});
+  factory {{feature.pascalCase()}}State.initial() => {{feature.pascalCase()}}State(foo: '');
 
   const {{feature.pascalCase()}}State._();
 
