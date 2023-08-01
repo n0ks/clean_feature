@@ -6,7 +6,16 @@ import '../../application/{{feature.snakeCase()}}_cubit.dart';
 
 @RoutePage()
 class {{feature.pascalCase()}} extends StatelessWidget {
-  const {{feature.pascalCase()}}({super.key});
+  late final {{feature.pascalCase()e}}Cubit _cubit;
+
+  {{feature.pascalCase()}}({super.key});
+
+  @override
+  void initState() { 
+    _cubit = sl<{{feature.pascalCase()}}Cubit>();
+    super.initState();
+    
+  }
 
   @override
   Widget build(BuildContext context) {
