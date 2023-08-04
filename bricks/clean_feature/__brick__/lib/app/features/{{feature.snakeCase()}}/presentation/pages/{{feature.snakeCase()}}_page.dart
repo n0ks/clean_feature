@@ -2,27 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../application/{{feature.snakeCase()}}_cubit.dart';
+import '../../../../../core/di/injection.dart';
 
 
 @RoutePage()
-class {{feature.pascalCase()}} extends StatelessWidget {
-  late final {{feature.pascalCase()e}}Cubit _cubit;
+class {{feature.pascalCase()}} extends StatefulWidget {
 
-  {{feature.pascalCase()}}({super.key});
+  const {{feature.pascalCase()}}({super.key});
 
   @override
-  void initState() { 
+  State<{{feature.pascalCase()}}> createState() => _TodoState();
+}
+
+
+
+class _{{feature.pascalCase()}}State extends State<Todo> {
+  late final {{feature.pascalCase()}}Cubit _cubit;
+
+  @override
+  void initState() {
     _cubit = sl<{{feature.pascalCase()}}Cubit>();
     super.initState();
-    
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<{{feature.pascalCase()}}Cubit, {{feature.pascalCase()}}State>(
-      builder: (context, state) {
-        return Container();
-      },
+    return BlocProvider(
+      create: (_) => _cubit,
+      child: BlocBuilder<{{feature.pascalCase()}}Cubit, TodoState>(
+        builder: (context, state) {
+          return Container();
+        },
+      ),
     );
   }
 }
+
