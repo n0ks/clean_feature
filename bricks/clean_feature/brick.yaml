@@ -2,7 +2,7 @@ name: clean_feature
 description: A brick that generates a clean feature
 
 repository: https://github.com/n0ks/clean_feature
-version: 0.1.0+1
+version: 0.1.1+1
 environment:
   mason: ">=0.1.0-dev.50 <0.1.0"
 

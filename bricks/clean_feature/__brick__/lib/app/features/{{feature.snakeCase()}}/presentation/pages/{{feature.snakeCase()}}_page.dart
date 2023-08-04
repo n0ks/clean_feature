@@ -6,17 +6,18 @@ import '../../../../../core/di/injection.dart';
 
 
 @RoutePage()
-class {{feature.pascalCase()}} extends StatefulWidget {
+class {{feature.pascalCase()}}Page extends StatefulWidget {
 
-  const {{feature.pascalCase()}}({super.key});
+  const {{feature.pascalCase()}}Page({super.key});
 
   @override
-  State<{{feature.pascalCase()}}> createState() => _TodoState();
+  State<{{feature.pascalCase()}}Page> createState() => _{{feature.pascalCase()}}PageState();
 }
 
 
 
-class _{{feature.pascalCase()}}State extends State<Todo> {
+class _{{feature.pascalCase()}}PageState extends State<{{feature.pascalCase()}}Page> {
+
   late final {{feature.pascalCase()}}Cubit _cubit;
 
   @override
@@ -29,7 +30,7 @@ class _{{feature.pascalCase()}}State extends State<Todo> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => _cubit,
-      child: BlocBuilder<{{feature.pascalCase()}}Cubit, TodoState>(
+      child: BlocBuilder<{{feature.pascalCase()}}Cubit, {{feature.pascalCase()}}State>(
         builder: (context, state) {
           return Container();
         },
