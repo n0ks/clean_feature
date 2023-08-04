@@ -1,5 +1,5 @@
 name: clean_feature
-description: A new brick created with the Mason CLI.
+description: A brick that generates a clean feature
 
 repository: https://github.com/n0ks/clean_feature
 version: 0.1.0+1
